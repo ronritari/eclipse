@@ -1,0 +1,150 @@
+//---------------
+//Employee.java
+//---------------
+/*
+ * Base class for employee class hierarchy
+ */
+public abstract class Employee {
+
+    private String name;
+    
+    public Employee() {}
+
+    public Employee(String name){
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+		this.name = name;
+	}
+
+	public abstract double calculateSalary();
+}
+
+//-------------------
+//HourlyEmployee.java
+//-------------------
+/*
+ * HourlyEmployee: salary is based on working hours and hourly wage
+ */
+public class HourlyEmployee extends Employee {
+	
+    private double hours;
+    private double hourlyWage;
+    
+    public HourlyEmployee() {}
+
+    public HourlyEmployee(String name, double hours, double houryWage){
+        super(name);
+        this.hours = hours;
+        this.hourlyWage = houryWage;
+    }
+
+    public double calculateSalary(){
+        return hours * hourlyWage;
+    }
+     
+    public double getHours() {
+		return hours;
+	}
+
+	public double getHourlyWage() {
+		return hourlyWage;
+	}
+
+	public void setHours(double hours) {
+		this.hours = hours;
+	}
+
+	public void setHourlyWage(double hourlyWage) {
+		this.hourlyWage = hourlyWage;
+	}
+
+	public String toString() {
+    	return "Hourly employee: " + getName() + ", hours " + hours + ", hourly wage " + hourlyWage + " €";
+    }
+}
+
+//---------------------
+//SalesEmployee.java
+//---------------------
+/*
+ * SalesEmployee: salary is based on commission percent and sales
+ */
+public class SalesEmployee extends Employee {
+	
+    private double sales;
+    private double commissionPercent;
+    
+    public SalesEmployee() {}
+
+    public SalesEmployee(String name, double sales, double commissionPercent){
+        super(name);
+        this.sales = sales;
+        this.commissionPercent = commissionPercent;
+    }
+
+    public double getSales() {
+		return sales;
+	}
+
+	public double getCommissionPercent() {
+		return commissionPercent;
+	}
+
+	public double calculateSalary(){
+        return sales * commissionPercent/100;
+    }
+    
+    public void setSales(double sales) {
+		this.sales = sales;
+	}
+
+	public void setCommissionPercent(double commissionPercent) {
+		this.commissionPercent = commissionPercent;
+	}
+
+	public String toString() {
+    	return "Sales employee: " + getName() + ", sales " + sales + " €, commission percent " + commissionPercent + " %";
+    }
+}
+
+//--------------------
+//SalesManager.java
+//--------------------
+/*
+ * SalesManager: salary is based on monthly salary, commission percent, and sales
+ */
+public class SalesManager extends SalesEmployee{
+	
+	private double monthlySalary;
+	
+	public SalesManager() {}
+	
+	public SalesManager(String name, double monthlySalary, double sales, double commissionPercent) {
+		super(name, sales, commissionPercent);
+		this.monthlySalary = monthlySalary;
+	}
+
+	public double calculateSalary(){
+		return monthlySalary + super.calculateSalary();
+	}
+	
+	public double getMonthlySalary() {
+		return monthlySalary;
+	}
+
+	public void setMonthlySalary(double monthlySalary) {
+		this.monthlySalary = monthlySalary;
+	}
+
+	public String toString() {
+    	return "Sales manager: " + getName() + ", monthly salary " + monthlySalary + " €, sales " +getSales() 
+    		+ " €, commission percent " + getCommissionPercent() + " %";
+    }
+	
+}
