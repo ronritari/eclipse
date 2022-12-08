@@ -51,6 +51,7 @@ public class harj8 {
 		//D:\\Kouluhommat\\eclipse\\harj8txt.txt
 		File file = new File(tiedosto);
     
+		
 		BufferedReader br = new BufferedReader(new FileReader(file));
 
 		String st;

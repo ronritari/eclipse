@@ -41,7 +41,9 @@ public class main {
 		addToArray(at);
 		
 	}
-
+	
+	
+	//järjestää pelaajat players listaan ja omiin olioihin
 	private static void addToArray(ArrayList<String> at) {
 		
 		for(int i = 0; i < at.size(); i++) {
