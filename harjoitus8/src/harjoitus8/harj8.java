@@ -9,7 +9,7 @@ public class harj8 {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		// File path is passed as parameter
-		//etsiMerkkijono();
+		etsiMerkkijono();
 		teht2();
 	}
 	
@@ -43,9 +43,13 @@ public class harj8 {
 	static void teht2() throws Exception {
 		ArrayList<Employee> list = new ArrayList<Employee>();
 		ArrayList<String> at = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
 		
-		File file = new File("D:\\Kouluhommat\\eclipse\\harj8txt.txt");
-
+		
+		System.out.println("mitä tiedostoa haluat käyttää?");
+		String tiedosto = sc.nextLine();
+		//D:\\Kouluhommat\\eclipse\\harj8txt.txt
+		File file = new File(tiedosto);
     
 		BufferedReader br = new BufferedReader(new FileReader(file));
 

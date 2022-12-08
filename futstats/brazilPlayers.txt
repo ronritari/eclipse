@@ -1,0 +1,77 @@
+Alisson Becker
+GK
+1
+Ederson
+GK
+23
+Weverton
+GK
+12
+Dani Alves
+DEF
+13 
+Thiago Silva
+DEF
+3 
+Marquinhos
+DEF
+4
+Danilo
+DEF
+2
+Alex Telles
+DEF
+16 
+Alex Sandro
+DEF
+6
+Eder Militao
+DEF
+14 
+Bremer
+DEF
+24 
+Bruno Guimarães
+CM
+17 
+Casemiro
+CM
+5 
+Lucas Paqueta
+CM
+7 
+Fabinho
+CM
+15 
+Fred
+CM
+8 
+Everton Ribeiro
+CM
+22 
+Neymar
+FWD
+10 
+Gabriel Jesus
+FWD
+18 
+Vinicius Junior
+FWD
+20 
+Antony
+FWD
+19 
+Richarlison
+FWD
+9 
+Raphinha
+FWD
+11 
+Rodrygo
+FWD
+21 
+Gabriel Martinelli
+FWD 
+Pedro
+FWD
+25 

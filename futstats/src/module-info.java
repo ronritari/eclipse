@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author ronri
+ *
+ */
+module futstats {
+}
